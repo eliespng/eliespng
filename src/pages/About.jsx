@@ -10,7 +10,6 @@ export default function About() {
           ici, pas de récit, pas de slogan. seulement la lumière, le grain, le vide
           entre deux instants.
         </p>
-        <p className="opacity-60 italic">— elies</p>
         <p className="opacity-60 italic">- eliès</p>
       </article>
     </main>
