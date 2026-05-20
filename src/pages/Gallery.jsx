@@ -1,8 +1,9 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { photos } from '../data/photos.js'
 
 export default function Gallery() {
   const [index, setIndex] = useState(null)
+  const [loaded, setLoaded] = useState({})
   const open = (i) => setIndex(i)
   const close = () => setIndex(null)
   const prev = useCallback(() => setIndex((i) => (i === null ? null : (i - 1 + photos.length) % photos.length)), [])
@@ -19,42 +20,68 @@ export default function Gallery() {
     return () => window.removeEventListener('keydown', onKey)
   }, [index, prev, next])
 
+  // Lock body scroll when lightbox is open
+  useEffect(() => {
+    if (index !== null) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [index])
+
   const blockSave = (e) => e.preventDefault()
+
+  const handleImageLoad = (id) => {
+    setLoaded((prev) => ({ ...prev, [id]: true }))
+  }
 
   return (
     <main className="pt-28 pb-16 px-6 md:px-12 fade-in" onContextMenu={blockSave}>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      {/* Masonry layout with CSS columns */}
+      <div className="max-w-6xl mx-auto columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
         {photos.map((p, i) => (
           <button
             key={p.id}
             onClick={() => open(i)}
-            className="group relative aspect-[4/5] overflow-hidden photo"
+            className="group relative w-full break-inside-avoid overflow-hidden photo block"
             aria-label={p.title}
           >
-            <div
-              className="absolute inset-0 bg-center bg-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
-              style={{ backgroundImage: `url(${p.src})` }}
+            <img
+              src={p.src}
+              alt={p.title}
+              loading="lazy"
+              onLoad={() => handleImageLoad(p.id)}
+              className={`w-full h-auto block transition-all duration-700 ease-in-out group-hover:scale-105 ${
+                loaded[p.id] ? 'opacity-100' : 'opacity-0'
+              }`}
+              draggable="false"
             />
+            {/* Hover overlay */}
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500 flex items-end p-4">
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <p className="text-sm lowercase italic">{p.title}</p>
                 <p className="text-xs lowercase opacity-60">{p.date}</p>
               </div>
             </div>
+            {/* Invisible overlay to block right-click save */}
             <div className="absolute inset-0" />
           </button>
         ))}
       </div>
 
+      {/* Lightbox */}
       {index !== null && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center fade-in"
           onClick={close}
           onContextMenu={blockSave}
         >
-          <div
-            className="absolute inset-0 bg-center bg-contain bg-no-repeat photo"
-            style={{ backgroundImage: `url(${photos[index].src})` }}
+          <img
+            src={photos[index].src}
+            alt={photos[index].title}
+            className="max-h-[85vh] max-w-[90vw] object-contain photo"
+            draggable="false"
           />
           <div className="absolute inset-0" />
           <button
