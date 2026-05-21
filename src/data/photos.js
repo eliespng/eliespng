@@ -17,7 +17,7 @@ export const photos = [
   { id: 13, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269626/IMG_7365_lawtfn.heic', title: 'sidi bou said, tunisie', date: '2023' },
   { id: 14, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269625/IMG_4517_lalapk.heic', title: 'tamniès', date: '2023' },
   { id: 15, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269625/IMG_6943_q1lmov.heic', title: 'btz', date: '2023' },
-  { id: 16, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269624/IMG_7174_nscmth.heic', title: 'mer pays-basque', date: '2023' },
+  { id: 16, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269624/IMG_7174_nscmth.heic', title: 'mer basque', date: '2023' },
   { id: 17, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269624/IMG_7294_zqjhiy.heic', title: 'crespuscule de suez', date: '2025' },
   { id: 18, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269624/IMG_6603_x26vos.heic', title: 'malaga, españa', date: '2026' },
   { id: 19, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269624/IMG_6815_is6jpz.jpg', title: 'hermanitos', date: '2023' },
