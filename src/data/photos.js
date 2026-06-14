@@ -45,4 +45,8 @@ export const photos = [
   { id: 41, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269614/D355D33F-716D-46EB-98EB-AF21CB31C6F1_hpztqu.jpg', title: 'aid mubarak', date: '2026' },
   { id: 42, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269613/FullSizeRender_VSCO_jgksad.jpg', title: 'lisbon, portugal', date: '2024' },
   { id: 43, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269613/Finale_pIC_llfvev.jpg', title: 'athens, greece', date: '2024' },
+  { id: 44, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1781424864/IMG_7325_cm5xdd.heic', title: 'cuivre nocturne, antibes', date: '2026' },
+  { id: 45, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1781424864/IMG_7239_s0cz5p.heic', title: '"Claire" de Lune, antibes', date: '2026' },
+  { id: 46, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1781424864/IMG_7364_aymqin.heic', title: 'éclat', date: '2026' },
+  { id: 47, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1781424865/IMG_7482_cxkd65.heic', title: 'amsterdam by night', date: '2026' },
 ]
