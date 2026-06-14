@@ -25,7 +25,7 @@ export const photos = [
   { id: 21, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269623/IMG_6669_xdicf2.heic', title: 'andalusia, españa', date: '2026' },
   { id: 22, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269621/IMG_3755_eq8itx.heic', title: 'mom in algeria', date: '2024' },
   { id: 23, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269621/IMG_4184_ncwb8l.heic', title: 'madrid, españa', date: '2025' },
-  { id: 24, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269621/IMG_5005_qzfys7.heic', title: "un soir à gare du nord", date: '2026' },
+  { id: 24, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269621/IMG_5005_qzfys7.heic', title: "gare du nord", date: '2026' },
   { id: 25, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269620/IMG_1873_c2pgz6.heic', title: 'lake bacalar, mexico', date: '2025' },
   { id: 26, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269620/IMG_4144_a0x18m.heic', title: 'mirlo', date: '2025' },
   { id: 27, src: 'https://res.cloudinary.com/dczrr0l5d/image/upload/q_auto/f_auto/w_1600/v1779269620/IMG_1675_w10y0n.heic', title: 'cozumel, mexico', date: '2025' },
